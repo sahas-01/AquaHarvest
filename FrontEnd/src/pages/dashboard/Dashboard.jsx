@@ -16,7 +16,7 @@ const Dashboard = () => {
   let count2 = 0;
   useEffect(() => {
     const getTankDetails = async () => {
-      const data = await fetch(`http://localhost:8080/getalltank`, {
+      const data = await fetch(`https://marinefarms-production.up.railway.app/getalltank`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

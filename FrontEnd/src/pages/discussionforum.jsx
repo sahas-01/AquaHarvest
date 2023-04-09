@@ -9,7 +9,7 @@ const DiscussionForum = () => {
     const [query, setQuery] = useState("")
     useEffect(() => {
         const getAllDiscussion = async () => {
-            const data = await fetch(`http://localhost:8080/getcomments`, {
+            const data = await fetch(`https://marinefarms-production.up.railway.app/getcomments`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -23,7 +23,7 @@ const DiscussionForum = () => {
 
     const handleAddComment = async () => {
         try {
-            const data = await fetch(`http://localhost:8080/addcomment`, {
+            const data = await fetch(`https://marinefarms-production.up.railway.app/addcomment`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -45,7 +45,7 @@ export default function signin() {
     console.log(email);
     console.log(password);
     try {
-      axios.post('http://localhost:8080/login', {
+      axios.post('https://marinefarms-production.up.railway.app/login', {
         email: email,
         password: password
       })

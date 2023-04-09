@@ -38,7 +38,7 @@ export default function Addfarm() {
     if (data.tankName || data.fish || data.location || data.phlevel > 0 && data.phlevel <= 7 || data.oxygen > 0 && data.oxygen <= 100) {
 
 
-      fetch('http://localhost:8080/addtank', {
+      fetch('https://marinefarms-production.up.railway.app/addtank', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

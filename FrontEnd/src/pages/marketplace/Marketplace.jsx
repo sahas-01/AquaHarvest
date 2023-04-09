@@ -19,7 +19,7 @@ export default function Marketplace(props) {
       navigate("/signin")
     }
     const getMarketDetails = async () => {
-      const data = await fetch(`http://localhost:8080/getfish`, {
+      const data = await fetch(`https://marinefarms-production.up.railway.app/getfish`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
