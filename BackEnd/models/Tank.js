@@ -1,15 +1,16 @@
 const mongoose = require("mongoose");
 
 const TankSchema = new mongoose.Schema({
-  userToken: { type: String, required: true },
+  user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
   tankName: { type: String, required: true },
   fish: [
     {
       fishName: { type: String, required: true },
-      fishStartDate: { type: String, required: true },
     },
   ],
-  totalNumberOfFish: { type: Number, required: true },
+  location: { type: String, required: true },
+  phlevel: { type: Number, required: true },
+  oxygen: { type: Number, required: true },
 });
 
 module.exports = mongoose.model("Tank", TankSchema);

@@ -13,11 +13,12 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link, NavLink } from "react-router-dom";
-
+import { useNavigate } from "react-router";
 const pages = [
   { name: "Dashboard", url: "/dashboard" },
   { name: "Market", url: "/marketplace" },
   { name: "Resources", url: "/resources" },
+  { name: "Discussion", url: "/discussionforum" }
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -39,7 +40,7 @@ function ResponsiveAppBar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-
+  const navigate = useNavigate();
   return (
     <AppBar position="static" sx={{ backgroundColor: "white" }}>
       <Container maxWidth="xl">
@@ -49,7 +50,7 @@ function ResponsiveAppBar() {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href="/onboarding"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -60,7 +61,7 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            AquaHarvest
+            MarineFarms
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -133,9 +134,29 @@ function ResponsiveAppBar() {
               </Link>
             ))}
           </Box>
+          <Box sx={{
+            flexGrow: 1, display: { xs: "none", md: "flex" },
+            justifyContent: "flex-end"
+          }}>
+            <Tooltip title="Logout">
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={
+                  () => {
+                    navigate("/");
+                    localStorage.clear();
+                  }
+                }>
+                Logout
+              </IconButton>
+            </Tooltip>
+          </Box>
         </Toolbar>
       </Container>
-    </AppBar>
+    </AppBar >
   );
 }
 export default ResponsiveAppBar;

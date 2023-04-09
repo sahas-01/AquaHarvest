@@ -9,53 +9,61 @@ const Resources = () => {
       <Navbar />
       <div className="firstPara"></div>
       <div className="links">
-        <div className="flex flex-row">
-          Popular fishes near me
-          {fishes.map((fish) => (
-            <div key={fish.name} className="LoadTank">
-              <img src={fish.imgUrl} alt="" width={100} />
-              <h1>{fish.name}</h1>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="links">
         <div className="LoadTank">
           <h2>Resources</h2>
         </div>
       </div>
       <ul>
-        <li>
+        <li
+          style={
+            {
+              marginTop: "10px"
+            }
+          }
+        >
           <a
             href="https://www.agrifarming.in/fish-farming"
-            style={{ textDecoration: "underline" }}
+            style={{
+              textDecoration: "underline",
+              fontSize: "25px"
+            }}
           >
             Fish Farming guide for begineers. Why you should consider fish
             farming.
           </a>
         </li>
-        <li>
+        <li
+          style={
+            {
+              marginTop: "10px"
+            }
+          }
+        >
           <a
             href="https://www.agrifarming.in/fish-farming"
-            style={{ textDecoration: "underline" }}
+            style={{
+              textDecoration: "underline",
+              fontSize: "25px"
+            }}
           >
-            Some other link
+            Fish Farming for Beginners
           </a>
         </li>
-        <li>
+        <li
+          style={
+            {
+              marginTop: "10px"
+            }
+          }
+        >
           <a
             href="https://dahd.nic.in/related-links/centrally-sponsored-scheme-development-inland-fisheries-and-aquaculture"
-            style={{ textDecoration: "underline" }}
+            style={{
+              textDecoration: "underline",
+              fontSize: "25px"
+            }}
           >
             Subsidy Resoures{" "}
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.agrifarming.in/fish-farming"
-            style={{ textDecoration: "underline" }}
-          >
-            Third resource
           </a>
         </li>
       </ul>

@@ -9,36 +9,37 @@ import data from "../../data/fishes"
 
 
 const TankPage = () => {
+
   const fishes = data.map((data) => {
-    return <Tank key={data.id} item={data}/>
+    return <Tank key={data.id} item={data} />
   })
-    const {tankName} = useParams();
-    const [tank, setTank] = useState({});
+  const { tankName } = useParams();
+  const [tank, setTank] = useState({});
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className="tanksContainer">
         <div className="left-div">
           <div className="left-div-top">
             <div className='user-info'>
               <h3>Hello User</h3>
-              <img src={User} alt="profile" id='profile-pic'/>
+              <img src={User} alt="profile" id='profile-pic' />
             </div>
             <div className='tank-info'>
               <div className='tanks'>
-                <h3>Tanks</h3><br/>
+                <h3>Tanks</h3><br />
                 <h3>5</h3>
               </div>
               <div className='Variety-info'>
-                <h3>Varieties</h3><br/>
+                <h3>Varieties</h3><br />
                 <h3>7</h3>
               </div>
             </div>
           </div>
-          <div><AlertCardMain/></div>
+          <div><AlertCardMain /></div>
         </div>
         <div className='right-div'>
-              {fishes}
+          {fishes}
         </div>
       </div>
     </div>

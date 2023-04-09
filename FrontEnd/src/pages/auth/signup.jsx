@@ -16,7 +16,7 @@ export default function signin() {
       <main>
         <Sheet
           sx={{
-            width: 300,
+            width: 700,
             mx: "auto", // margin left & right
             my: 4, // margin top & botom
             py: 3, // padding top & bottom
@@ -58,12 +58,20 @@ export default function signin() {
             label='Password'
           />
           <TextField
-            name='confirm password'
-            type='password'
-            placeholder='confirm password'
+            name='location'
+            type='text'
+            placeholder='Current location'
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-            label='Confirm Password'
+            label='Location'
+          />
+          <TextField
+            name='bio'
+            type='text'
+            placeholder='Write in less than 20 words'
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            label='Bio'
           />
           <Button sx={{ mt: 1 /* margin top */ }}>Sign Up</Button>
           <Typography

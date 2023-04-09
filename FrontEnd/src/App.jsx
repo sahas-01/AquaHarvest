@@ -15,6 +15,8 @@ import Addtank from "./pages/addtank/Addtank";
 import TankPage from "./pages/tank/TankPage";
 import AddFish from "./pages/addFish/AddFish";
 import Addsensor from "./pages/addsensor/Addsensor";
+import DiscussionForum from "./pages/discussionforum";
+import PopularFishes from "./pages/popularfishes/PopularFishes";
 export const ThemeContext = createContext();
 
 export default function App() {
@@ -25,7 +27,7 @@ export default function App() {
     location: "Kochi",
     tname: "",
     farmName: "fresh farm",
-    ftype:1,
+    ftype: 1,
     fishes: 0,
     fnum: [],
     fname: [],
@@ -34,9 +36,9 @@ export default function App() {
     confirmPassword: "1234",
     fdate: [],
   });
-  useEffect(()=>{
+  useEffect(() => {
     console.log(state)
-  },[state])
+  }, [state])
   return (
     <ThemeContext.Provider value={{ state, setState }}>
       <div>
@@ -50,10 +52,12 @@ export default function App() {
           <Route path="/addTank" element={<Addtank />}></Route>
           <Route path="/addFish" element={<AddFish />}></Route>
           <Route path="/marketplace" element={<Marketplace />}></Route>
-          <Route path="/product3" element={<ProdPage />}></Route>
+          <Route path="/product" element={<ProdPage />}></Route>
           <Route path="/tank/:tankName" element={<TankPage />}></Route>
           <Route path="/sensor" element={<Addsensor />}></Route>
           <Route path="/resources" element={<Resources />}></Route>
+          <Route path="/discussionforum" element={<DiscussionForum />}></Route>
+          <Route path="/popularfishes" element={<PopularFishes />}></Route>
         </Routes>
       </div>
     </ThemeContext.Provider>
