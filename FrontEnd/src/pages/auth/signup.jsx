@@ -9,7 +9,34 @@ import { useState } from "react";
 export default function signin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [location, setLocation] = useState("");
+  const [bio, setBio] = useState("");
+
+
+  const handleSignUp = (event) => {
+    event.preventDefault();
+    const data = {
+      email: email,
+      bio: bio,
+      location: location,
+      password: password,
+    }
+    try {
+      axios.post('https://marinefarms-production.up.railway.app/register', data)
+        .then(function (response) {
+          console.log(response);
+          // localStorage.setItem('token', response.data.token);
+          // localStorage.setItem('user', JSON.stringify(response.data.user));
+          navigate('/signin');
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+    catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <CssVarsProvider>
@@ -61,19 +88,21 @@ export default function signin() {
             name='location'
             type='text'
             placeholder='Current location'
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
             label='Location'
           />
           <TextField
             name='bio'
             type='text'
             placeholder='Write in less than 20 words'
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
+            value={bio}
+            onChange={(e) => setBio(e.target.value)}
             label='Bio'
           />
-          <Button sx={{ mt: 1 /* margin top */ }}>Sign Up</Button>
+          <Button
+            onClick={handleSignUp}
+            sx={{ mt: 1 /* margin top */ }}>Sign Up</Button>
           <Typography
             endDecorator={<Link href='/signin'>Log In</Link>}
             fontSize='sm'
@@ -83,6 +112,6 @@ export default function signin() {
           </Typography>
         </Sheet>
       </main>
-    </CssVarsProvider>
+    </CssVarsProvider >
   );
 }
