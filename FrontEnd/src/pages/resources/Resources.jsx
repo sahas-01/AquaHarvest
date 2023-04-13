@@ -28,7 +28,7 @@ const Resources = () => {
               fontSize: "25px"
             }}
           >
-            Fish Farming guide for begineers. Why you should consider fish
+            Fish Farming guide for beginners. Why you should consider fish
             farming.
           </a>
         </li>
