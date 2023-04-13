@@ -6,6 +6,8 @@ const TankSchema = new mongoose.Schema({
   fish: [
     {
       fishName: { type: String, required: true },
+      fishOxygen: { type: Number, required: true },
+      fishPH: { type: Number, required: true }
     },
   ],
   location: { type: String, required: true },

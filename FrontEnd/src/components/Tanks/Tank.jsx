@@ -37,6 +37,27 @@ const Tank = ({ item }) => {
                     } %
                     </div>
                 </div>
+                <div
+                    style={{
+                        fontWeight: "bold",
+                        fontSize: "1.2rem",
+                    }}
+                    className='info-detail2'>
+                    <div>Tank type:</div>
+                    {
+                        item.phlevel > 4 ? <div
+                            style={{
+                                color: "green",
+                                marginLeft: "-2rem",
+                            }}
+                            className='phlevel'>Alkaline</div> : <div
+                                style={{
+                                    color: "red",
+                                    marginLeft: "-2rem"
+                                }}
+                                className='phlevel'>Acidic</div>
+                    }
+                </div>
                 {/* <Link to={`/tank/${props.item.name}`}>More..</Link> */}
             </div>
         </div>

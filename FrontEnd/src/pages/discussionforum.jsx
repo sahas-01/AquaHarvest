@@ -3,9 +3,10 @@ import NavBar from '../components/Navbar/Navbar'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import discussion from "../images/discussion.png"
-
+import { useNavigate } from 'react-router-dom';
 const DiscussionForum = () => {
     const [comments, setComments] = useState([])
+    const navigate = useNavigate()
     const [query, setQuery] = useState("")
     useEffect(() => {
         const getAllDiscussion = async () => {
@@ -37,7 +38,7 @@ const DiscussionForum = () => {
             const discussionDetails = await data.json()
             alert("Comment Added Successfully")
             setTimeout(() => {
-                window.location.reload()
+                navigate('/discussionforum')
             }, 3000)
 
         }

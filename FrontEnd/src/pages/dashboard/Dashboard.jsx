@@ -93,7 +93,7 @@ const Dashboard = () => {
                     color: "green",
                   }}>Normal Tank Profile</div> : <div style={{
                     color: "red"
-                  }}>Tank is acidic, need some repairs, adjust fish accordingly</div>
+                  }}>Acidic profile, need some repairs, adjust fish accordingly</div>
                 }
               </div> : null
             }

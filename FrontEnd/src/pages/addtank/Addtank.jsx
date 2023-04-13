@@ -16,12 +16,18 @@ export default function Addfarm() {
   const [oxygen, setOxygen] = useState("")
   const [fish, setFish] = useState([]);
   const navigate = useNavigate();
-  const handleAddFishName = () => {
+  const handleAddFish = () => {
     const fishNameInput = document.getElementById('fishNameInput');
+    const fishOxygenInput = document.getElementById('fishOxygenInput');
+    const fishPHInput = document.getElementById('fishPHInput');
     const fishName = fishNameInput.value;
-    if (fishName) {
-      setFish([...fish, { fishName }]);
+    const fishOxygen = parseFloat(fishOxygenInput.value);
+    const fishPH = parseFloat(fishPHInput.value);
+    if (fishName && !isNaN(fishOxygen) && !isNaN(fishPH)) {
+      setFish([...fish, { fishName, fishOxygen, fishPH }]);
       fishNameInput.value = '';
+      fishOxygenInput.value = '';
+      fishPHInput.value = '';
     }
   };
   function handleSubmit(event) {
@@ -35,10 +41,10 @@ export default function Addfarm() {
     }
 
     console.log(data)
-    if (data.tankName || data.fish || data.location || data.phlevel > 0 && data.phlevel <= 7 || data.oxygen > 0 && data.oxygen <= 100) {
+    if (data.tankName && data.fish && data.location && data.phlevel > 0 && data.phlevel <= 7 && data.oxygen > 0 && data.oxygen <= 100) {
 
 
-      fetch('https://marinefarms-production.up.railway.app/addtank', {
+      fetch('http://localhost:8080/addtank', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -111,16 +117,26 @@ export default function Addfarm() {
             </div>
             <div>
               <input type="text" id="fishNameInput"
-                style={{ width: '36vw', height: '40px', border: '2px solid #4CE0D2', borderRadius: '5px', outline: 'none', paddingLeft: '10px', marginTop: '20px', marginRight: '10px' }}
+                style={{ width: '11.5vw', height: '40px', border: '2px solid #4CE0D2', borderRadius: '5px', outline: 'none', paddingLeft: '10px', marginTop: '20px', marginRight: '10px' }}
                 placeholder='Enter Fish Name'
+              />
+              <input type="text" id="fishPHInput"
+                style={{ width: '11.5vw', height: '40px', border: '2px solid #4CE0D2', borderRadius: '5px', outline: 'none', paddingLeft: '10px', marginTop: '20px', marginRight: '10px' }}
+                placeholder='pH Level'
+              />
+              <input type="text" id="fishOxygenInput"
+                style={{ width: '11.5vw', height: '40px', border: '2px solid #4CE0D2', borderRadius: '5px', outline: 'none', paddingLeft: '10px', marginTop: '20px', marginRight: '10px' }}
+                placeholder='Oxygen input'
               />
               <button
                 style={{ width: '55px', height: '40px', border: '2px solid #4CE0D2', borderRadius: '5px', outline: 'none', marginTop: '20px', marginRight: '10px', backgroundColor: '#4CE0D2' }}
-                onClick={handleAddFishName}>+</button>
+                onClick={handleAddFish}>+</button>
             </div>
             <ul>
               {fish.map((fishObj, index) => (
-                <li key={index}>{fishObj.fishName}</li>
+                <li key={index}>
+                  {fishObj.fishName}, {fishObj.fishOxygen} %, {fishObj.fishPH}
+                </li>
               ))}
             </ul>
             <div
