@@ -1,35 +1,16 @@
-# **<div align="center">AquaHarvest</div>**  
+# **<div align="center">Marine Farms</div>**  
 
-<img src ="https://user-images.githubusercontent.com/74866650/210031277-f4b09ded-7210-479a-9a71-42057c49f869.jpeg">
+## Problem statement
+Fish farming involves the commercial farming of fish, usually for food, in artificial enclosures such as fish tanks or fishponds. Aquaculture is a rapidly growing industry due to increasing global demand for
+fish and seafood, and also as it helps to sustain wild fish populations, protect biodiversity and also provide jobs to rural communities. However, the growth of this industry also has it's own set of challenges such as environmental concerns and sustainability. The industry must balance its growth with the need to protect aquatic ecosystems and wild fish populations. Fisheries in India play a significant role in the economy, particularly in creating employment opportunities in rural areas. The sector has a wide range of possibilities for growth. Prior to India's independence, fisheries were not considered as a major contributor to the economy but since independence, the importance of fisheries and agriculture as income generating sectors has been acknowledged.
 
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"><img src="https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white"><img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"><img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"><img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"><img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white"><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"><img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E">
-
-## Table of Contents
-1. [What is AquaHarvest?](#project-description)
-2. [Team Members](#team-members)
-3. [Tech Stack](#tech-stack)
-4. [Assumptions & References](#assumptions)
-5. [Project Demo](#project-demo)
-
-
-Presentation : [PPT Link](https://www.canva.com/design/DAFTudil6cU/VFI5qItIGgk8tVm8sh6Z_A/view?utm_content=DAFTudil6cU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-[Demo Video](https://drive.google.com/file/d/1egL_tLBTwpI326934vd_q-Up7WAlFMoG/view?usp=share_link)
 
 ## Project Description
 
-Our Vision: Promote fish farm cultivation using a sustainable manner while earning profit
+Objective: Promote fish farm cultivation in a sustainable manner thereby maximizing profits
 
 Target Customers: Local Fish farmers
 
-The Problem :  
-- Many people don't know the benefits of doing aquaponics or doing fish farm cultivation.
-- Even if some realise the benefits, they don't know of proper good resources to actually start the cultivation
-- Once you start the cultivation, the current methods takes time and is prone to trial and error during the initial days
-- You would need to manually go and check every often to ensure that the fishes are in good health  
-- Even once the fishes are in good health, the seller don't know how exactly to market them to potential customers
-
- 
-# Our Solution
 - Create a platform for a new individuals to start fish farm cultivation from scratch and earn a livelihood selling fish produce and also for existing farms to simplify their daily work.
 - The platform will have both farmer and customer side, primarily focussed on the farmer side.
  
@@ -74,21 +55,13 @@ The Problem :
 - We offer transportation facility to customers from afar which may be very difficult for new farmers to provide, but is a very good way to attract new customers with our premimum plan.
 
 
-## Team Members
-### **Team Name** : Ryzen Sharks
-1. [Aldrin Jenson](https://github.com/aldrinjenson)
-1. [Hanna Salam](https://github.com/hannasalam)
-1. [Jithin Jagadeesh](https://github.com/jithin-j)
-1. [Mrinalini Nair Ani](https://github.com/hacksh4w/)
-1. [Subramani E](https://github.com/subru-37)
-
 
 ## Tech Stack
- MERN Stack, Material UI, Replit (hosting),
- [Hosted Link](https://replit.com/@aldrinjenson/AquaHarvest),
- [Demo Video](https://drive.google.com/file/d/1egL_tLBTwpI326934vd_q-Up7WAlFMoG/view?usp=share_link)
+- ReactJS, MaterialUI (Frontend)
+- NodeJS, ExpressJS (Backend)
+- MondodB (Database)
 	
-## Assumptions  & References
+## Assumptions & References
 
 - Assumption that people like fresh fish based on statistics.
 - The ranges for readings of ph and temperature are reffered from https://www.researchgate.net/publication/334091423_IoT_Based_Automated_Fish_Farm_Aquaculture_Monitoring_System
